@@ -49,3 +49,12 @@ crudini --set /etc/php/7.2/apache2/php.ini PHP short_open_tag On
 crudini --set /etc/php/7.2/apache2/php.ini PHP memory_limit 512M
 crudini --set /etc/php/7.2/apache2/php.ini PHP upload_max_filesize 128M
 crudini --set /etc/php/7.2/apache2/php.ini PHP max_execution_time 3600
+
+systemctl restart apache2
+
+#### DATABASE SETUP ??? ####
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --install-dir=/usr/bin/ --filename=composer
+
+
