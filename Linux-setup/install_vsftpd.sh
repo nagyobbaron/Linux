@@ -43,7 +43,8 @@ exit 0
 
 elif [[ $1 == "--install" ]]; then
     function_install
-    echo install done
+    echo "Installation of VSFTP server is done"
+    read -n 1 -s -r -p "Press any key to continue"
 
 elif [[ $1 == "--adduser" && $2 != "" ]]; then
     echo adding user "$2"
