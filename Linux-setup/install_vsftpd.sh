@@ -42,13 +42,13 @@ END
 exit 0
 
 elif [[ $1 == "--install" ]]; then
-    #function_install
+    function_install
     echo install done
 
 elif [[ $1 == "--adduser" && $2 != "" ]]; then
     echo adding user "$2"
     useradd -m "$2"
     passwd "$2"
-    bash -c "echo FTP TESTING > /home/$2/FTP-TEST"
+    #bash -c "echo FTP TESTING > /home/$2/FTP-TEST"
 fi
 
