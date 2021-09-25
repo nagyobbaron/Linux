@@ -1,6 +1,6 @@
 ---
 - name: Deploy files using a Jinja2 template
-  hosts: all
+  hosts: rhel
   become: true
 
   tasks: 
